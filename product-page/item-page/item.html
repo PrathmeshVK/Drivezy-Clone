@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivezy</title>
+    <link rel="stylesheet" href="item-style.css">
+    <link rel="icon" type="image/x-icon" href="https://drivezy.com/favicon.ico" />
+    <script src="https://kit.fontawesome.com/2d42f35cf8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="common header">
+        <div class="container">
+            <div class="leftbar">
+                <img id="drivezy-logo"
+                    src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1566208475_drivezyheaderlogo.svg"
+                    alt="drivezy-logo" />
+                <div class="country">
+                    <img src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1566564152_indiaflag.svg"
+                        alt="country-india" />
+                    <p>India</p>
+                    <img src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1566562781_down_arrow.svg"
+                        alt="drop-down-arrow" />
+                </div>
+                <div class="city">
+                    <p>Bengaluru</p>
+                    <img src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1566562781_down_arrow.svg"
+                        alt="drop-down-arrow" />
+                </div>
+            </div>
+            <div class="rightbar">
+                <div class="earnwithus">
+                    <p>Earn with Us</p>
+                    <img src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1566562781_down_arrow.svg"
+                        alt="drop-down-arrow" />
+                </div>
+                <p>My Offers</p>
+                <div class="careers">
+                    <p>Careers</p>
+                    <img src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1566562781_down_arrow.svg"
+                        alt="drop-down-arrow" />
+                </div>
+                <div class="myplans">
+                    <img src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1568179217_plan.svg" alt="cart" />
+                    <a href="../cart-page/cart.html">
+                        <p>My Plan</p>
+                    </a>
+                </div>
+                <img class="myprofile"
+                    src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1566206159_profile.svg" alt="profile"
+                    id="myBtn" />
+            </div>
+        </div>
+    </div>
+
+    <!-- login-sign up page -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modalcontent">
+            <div class="modalheader">
+                Login/SignUp <span class="close">&times;</span>
+            </div>
+            <div class="modalbody">
+                <div class="description">Welcome to drivezy!</div>
+                <form id="email_mobile_number">
+                    <div class="form-input form-width" id="form_input">
+                        <label class="input-label">Email address / Phone</label><input class="input-box"
+                            id="email_number" name="name" required />
+                    </div>
+                    <div class="button_section" id="button_section">
+                        <button id="proceed" type="submit">PROCEED</button>
+                    </div>
+                </form>
+                <div class="center-text">
+                    <span class="line"></span><span class="or">Or</span><span class="line"></span>
+                </div>
+                <div class="social-login">
+                    <div id="gSigninBtn" class="social-button">
+                        <img onclick="googlelogin()" alt="google-login"
+                            src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1569575931_google-button.png" />
+                    </div>
+                    <div class="social-button">
+                        <img onclick="facebooklogin()" alt="fb-login"
+                            src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1569575846_facebook-button.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- login dropdown -->
+    <div class="login-pop">
+        <button class="closeLoginPop"><i class="fa-solid fa-xmark"></i></button>
+        <div class="myprofile">
+            <i class="fa-regular fa-user"></i>
+            <p>My profile</p>
+        </div>
+        <div class="mybookings">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <p>My bookings</p>
+        </div>
+        <div class="mycodrivers">
+            <i class="fa-regular fa-id-card"></i>
+            <p>My Co-Drivers</p>
+        </div>
+        <div class="mywallet">
+            <i class="fa-solid fa-wallet"></i>
+            <p>My Wallet</p>
+        </div>
+        <div class="mybank">
+            <i class="fa-solid fa-building-columns"></i>
+            <p>My Bank Details</p>
+        </div>
+        <div class="changepass">
+            <i class="fa-solid fa-unlock-keyhole"></i>
+            <p>Change Password</p>
+        </div>
+        <div class="logout" id="logout">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <p>Log Out</p>
+        </div>
+    </div>
+    <!-- search bar -->
+    <section id="search-bar">
+        <form method="post" class="search-bar">
+            <div>
+                <p>I want to rent a</p>
+                <div>
+                    <div>
+                        <img src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1555509635_group-3%403x.png"
+                            alt="car icon" id="car-icon">
+                    </div>
+                    <div>
+                        <img src="https://jtride-data.s3.ap-south-1.amazonaws.com/uploads/1555509998_group-2%403x.png"
+                            alt="bike logo" id="bike-icon">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>I need my vehicle near</p>
+                <select name="location" id="location">
+                    <option value="Bellandur (New)">Bellandur (New)</option>
+                    <option value="Bommanahalli">Bommanahalli</option>
+                    <option value="Mathikere">Mathikere</option>
+                    <option value="Manpho Convention Center (New)">Manpho Convention Center (New)</option>
+                    <option value="Ashwath Nagar (HBR Layout)">Ashwath Nagar (HBR Layout)</option>
+                </select>
+            </div>
+            <div>
+                <p>Select your pickup date & time</p>
+                <input type="datetime-local" name="pickup-date" id="pickup-date">
+            </div>
+            <div>
+                <p>Select your drop date & time</p>
+                <input type="datetime-local" name="drop-date" id="drop-date">
+            </div>
+            <div>
+                <p>&nbsp;</p>
+                <button type="submit">SEARCH</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- item display -->
+
+    <section class="item-container">
+        <div class="left-container">
+            <div class="product-desc">
+                <div>
+                    <h3 id="car_name"></h3>
+                    <div>
+                        <img src="https://drivezy.com/static/media/Manual.da2da54d.svg" alt="gear icon">
+                        <span id="transmission"></span>
+                        <img src="https://drivezy.com/static/media/seats.b777050d.svg" alt="seat icon">
+                        <span id="seats"></span>
+                        <img src="https://drivezy.com/static/media/fuel.5001188a.svg" alt="fuel icon" id="fuel_icon">
+                        <span id="fuel-type"></span>
+                        <img src="https://drivezy.com/static/media/engine_capacity.b3073326.svg" alt="engine"
+                            style="top: 0;" id="engine_icon">
+                        <span id="engine"></span>
+                    </div>
+                    <p class="note">Note: This image is for representation purpose only. The colour of the actual
+                        vehicle
+                        may differ.</p>
+                </div>
+                <div>
+                    <img id="car-image" src="" alt="car">
+                </div>
+            </div>
+            <div class="fuel-info">
+                <p>Fuel package</p>
+                <div>
+                    <span>Selected Package</span>
+                    <select name="fuel" id="fuel">
+                        <option value="">No Fuel</option>
+                        <option value="120">120 km</option>
+                        <option value="240">240 km</option>
+                        <option value="360">360 km</option>
+                    </select>
+                </div>
+                <p class="note">
+                    There is no travel limit. ₹2/km distance charge will be applied over the booking amount. Fuel bills
+                    are not reimbursed in this package.
+                </p>
+            </div>
+            <div class="pickupdrop">
+                <span>Pick up & drop</span>
+                <div class="timing">
+                    <div class="date-style">
+                        <div id="pickupDate">11</div>
+                        <div>
+                            <span id="pickup-month"></span>
+                            <span id="pickup-time"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <hr>
+                        <div>
+                            <p>Duration</p><span id="duration"></span>
+                        </div>
+                    </div>
+                    <div class="date-style">
+                        <div id="dropDate"></div>
+                        <div>
+                            <span id="drop-month"></span>
+                            <span id="drop-time"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="address-container">
+                    <div class="address">
+                        <div>
+                            <div>
+                                <img src="https://drivezy.com/static/media/location_icon.a7c35c82.svg"
+                                    alt="location logo">
+                            </div>
+                            <div>
+                                <span class="car-location subtle-green"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="note"><span class="car-location"></span> Bengaluru, Karnataka 560068</p>
+                            <p class="distance"><b></b></p>
+                        </div>
+                    </div>
+                    <div class="address address-right">
+                        <div>
+                            <div>
+                                <img src="https://drivezy.com/static/media/location_icon.a7c35c82.svg"
+                                    alt="location logo">
+                            </div>
+                            <div>
+                                <span class="car-location subtle-green"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="note"><span class="car-location"></span> Bengaluru, Karnataka 560068</p>
+                            <p class="distance"><b></b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="policy-container">
+                    <p>Guidelines & Policies</p>
+                    <ul>
+                        <li>
+                            Please carry your original driving license along with an additional ID proof when you come
+                            to pick up your vehicle.
+                        </li>
+                        <li>
+                            Your license must be verified by our system before you start your trip or else your trip
+                            will be cancelled. To check your license status, <span>click here<span>.
+                        </li>
+                        <li>
+                            Our vehicles have a maximum speed limit of 120 km/hr. Over-speeding will attract fines. To
+                            check our over-speeding policy, <span>click here</span>.
+                        </li>
+                        <li>
+                            If you plan to travel out-of-state, please ensure that you take the required state permits.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <p>Fare Details</p>
+            <div class="fare-top">
+                <div>
+                    <span class="subtle-blue">Weekday Charges</span>
+                    <span class="price"></span>
+                </div>
+                <div>
+                    <span class="subtle-blue">Security Deposit</span>
+                    <span>₹0</span>
+                </div>
+            </div>
+            <div class="fare-bottom">
+                <div>
+                    <span><b>Total fare</b></span>
+                    <span class="price"><b></b></span>
+                </div>
+                <ul>
+                    <li class="note">
+                        This price is rounded off and is inclusive of GST
+                    </li>
+                </ul>
+                <p>Have a coupon ?</p>
+                <p><b id="coupon">APPLY HERE</b></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+
+    <footer>
+        <section class="checkout-footer">
+            <div class="left-footer">
+                <div>
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                </div>
+                <div>
+                    <p>
+                        Dear user, You are just one step away from confirming your booking. Confirm that you are above
+                        21
+                        and you agree to all the terms mentioned in <a href="#">Terms & Conditions</a>
+                    </p>
+                </div>
+            </div>
+            <div class="right-footer">
+                <div class="fare-text">
+                    <div>
+                        <span>To Pay</span>
+                        <span class="price"></span>
+                    </div>
+                    <div>
+                        <a href="#" class="subtle-green">Show breakup</a>
+                    </div>
+                </div>
+                <div>
+                    <button id="cart_btn" disabled><b>ADD TO CART</b></button>
+                </div>
+                <div>
+                    <button id="book_btn" disabled><b>QUICK BOOK</b></button>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
+
+<script src="item-script.js"></script>

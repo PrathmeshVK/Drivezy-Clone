@@ -1,0 +1,794 @@
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+        url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+        url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
+    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'),
+        url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'),
+        url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adelle_rgregular';
+    src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot');
+    src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://litmus.com/fonts/Emails/adelle_reg-webfont.woff') format('woff'),
+        url('https://litmus.com/fonts/Emails/adelle_reg-webfont.ttf') format('truetype'),
+        url('https://litmus.com/fonts/Emails/adelle_reg-webfont.svg#adelle_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* navbar */
+
+.container {
+    width: 70%;
+    margin: auto;
+    max-width: 1350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftbar,
+.rightbar {
+    display: flex;
+}
+
+.country {
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.country img,
+.myplans img {
+    margin-right: 10px;
+}
+
+.city {
+    display: flex;
+    cursor: pointer;
+}
+
+.earnwithus,
+.careers {
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.myplans {
+    display: flex;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.myplans a {
+    text-decoration: none;
+    color: black;
+}
+
+#drivezy-logo,
+.myprofile {
+    cursor: pointer;
+}
+
+/* login signup page */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalcontent {
+    border-radius: 10px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2px 32px 2px 32px;
+    border: 1px solid #888;
+    width: 25%;
+}
+
+.description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #77899b;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#proceed {
+    z-index: 1;
+    color: #fff;
+    border: 1px solid #41b6ac !important;
+    border-radius: 6px;
+    background: #41b6ac !important;
+    width: 100%;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.modalheader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: inherit;
+    letter-spacing: -0.008em;
+    margin: 24px 0 16px;
+    line-height: 16px;
+    color: #1f2d3d;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.modalbody {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-label {
+    color: #1f2d3d;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-box {
+    height: 48px;
+    border: 1px solid #b8c1cb;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0 8px;
+    font-size: 16px;
+    color: #2b3a51;
+    width: 94%;
+}
+
+.button_section {
+    margin-top: 34px;
+}
+
+.center-text {
+    width: 38%;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+}
+
+.center-text .or {
+    position: relative;
+    top: -10px;
+    background: #fff;
+    padding: 0 11px;
+    color: #b8c1cb;
+}
+
+.line {
+    width: 44px;
+    border-top: 1px solid #b8c1cb;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 0;
+    margin-bottom: 0px;
+}
+
+.social-button img {
+    height: 30px;
+    border-radius: 4px;
+}
+
+.input-label {
+    margin-top: 20px;
+}
+
+.checkbox-container {
+    position: relative;
+    padding: 12px 16px;
+    cursor: pointer;
+    display: flex;
+    flex: 1 1;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    margin-top: 20px;
+    border: 1.8px solid #77899b;
+}
+
+#checkboxid {
+    margin-top: 6px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.marked {
+    margin-top: 11px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: lightgray;
+}
+
+.marked:hover {
+    background-color: darkgray;
+}
+
+#checkboxid:checked~.marked {
+    background-color: #41b6ac;
+}
+
+/* Create the mark/indicator (hidden when not checked) */
+.marked:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the mark when checked */
+#checkboxid:checked~.marked:after {
+    display: block;
+}
+
+.marked:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+/* login pop */
+.login-pop {
+    width: 209px;
+    height: 390px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: absolute;
+    margin-left: 1135px;
+    display: none;
+    padding-bottom: 25px;
+    background-color: white;
+}
+
+.myprofile,
+.mywallet,
+.mybookings,
+.mycodrivers,
+.mybank,
+.changepass,
+.logout {
+    display: flex;
+    cursor: pointer;
+}
+
+.myprofile:hover,
+.mywallet:hover,
+.mybookings:hover,
+.mycodrivers:hover,
+.mybank:hover,
+.changepass:hover,
+.logout:hover {
+    background-color: rgba(221, 226, 232, .5);
+}
+
+.closeLoginPop {
+    margin-left: 170px;
+    cursor: pointer;
+}
+
+.myprofile i,
+.mywallet i,
+.mybookings i,
+.mycodrivers i,
+.mybank i,
+.changepass i,
+.logout i {
+    margin-top: 18px;
+    margin-right: 25px;
+    padding-left: 15px;
+}
+
+
+
+/* search bar */
+
+button,
+a {
+    cursor: pointer;
+}
+
+#search-bar>form {
+    display: grid;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 1320px;
+    margin: 20px auto auto;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: rgb(193 189 189) 0px 2px 9px 2px;
+}
+
+#search-bar>form>div:first-child>div {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 20px;
+    width: 200px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 7px;
+}
+
+#search-bar #car-icon {
+    width: 70px;
+    display: block;
+    margin-left: 20px;
+}
+
+#search-bar #bike-icon {
+    width: 70px;
+    display: block;
+    border-left: 1px solid rgb(190, 190, 190);
+    padding-left: 20px;
+}
+
+#search-bar button {
+    width: 140px;
+    height: 50px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 7px;
+    background-color: #41bca6;
+    color: white;
+    font-weight: bold;
+}
+
+#search-bar p {
+    font-size: 12px;
+    margin-top: 0;
+    white-space: nowrap;
+    color: #7b7b7b;
+}
+
+#search-bar select {
+    width: 400px;
+    height: 50px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#search-bar input {
+    text-align: center;
+    padding: 10px;
+    font-size: larger;
+    width: 227px;
+    height: 50px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 7px;
+    color: #7b7b7b;
+}
+
+.item-container {
+    display: flex;
+    width: 1320px;
+    margin: 20px auto 50px;
+    justify-content: space-between;
+    border-radius: 10px;
+    gap: 25px;
+}
+
+/* left container */
+
+.left-container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
+    width: 70%;
+}
+
+.product-desc {
+    display: flex;
+    height: 140px;
+}
+
+.product-desc {
+    border-bottom: 1px solid rgb(213, 211, 211);
+}
+
+.product-desc>div:last-child {
+    padding: 20px;
+}
+
+.product-desc>div>div img {
+    position: relative;
+    top: 3px;
+}
+
+#car-image {
+    width: 150px;
+}
+
+.product-desc span {
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+.product-desc>div:first-child {
+    padding-right: 100px;
+}
+
+.note {
+    font-size: 12px;
+    color: #7b7b7b;
+}
+
+.fuel-info {
+    border-bottom: 1px solid rgb(213, 211, 211);
+    margin-top: 30px;
+    height: 130px;
+}
+
+.fuel-info>p:first-child {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.fuel-info>div {
+    border: 1px solid rgb(190, 190, 190);
+    width: 290px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    background-color: #ecf0f5;
+    justify-content: space-between;
+}
+
+.fuel-info span {
+    align-self: center;
+    font-size: 13px;
+    color: #77899b;
+    margin-left: 20px;
+}
+
+.fuel-info select {
+    width: 50%;
+    border: none;
+    color: rgb(22, 181, 197);
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+}
+
+.pickupdrop {
+    margin-top: 20px;
+}
+
+.timing {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timing>div {
+    display: flex;
+}
+
+.timing>div:nth-child(2) {
+    display: block;
+    width: 30%;
+    position: relative;
+}
+
+.timing>div:nth-child(2)>hr {
+    position: relative;
+    top: 22px;
+}
+
+.timing>div:nth-child(2)>div {
+    position: absolute;
+    border: 1px solid rgb(213, 211, 211);
+    background-color: white;
+    border-radius: 23px;
+    width: 110px;
+    text-align: center;
+    padding: 7px;
+    left: 70px;
+    top: 7px;
+}
+
+.timing>div:nth-child(2)>div>p {
+    margin: 0;
+    color: #77899b;
+    font-size: 12px;
+}
+
+.timing>div:nth-child(2)>div>span {
+    font-weight: bold;
+}
+
+.timing>div:last-child {
+    text-align: right;
+}
+
+.date-style {
+    text-align: center;
+    height: 60px;
+}
+
+.date-style>div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.date-style>div:first-child {
+    font-size: 55px;
+}
+
+#drop-month,
+#pickup-month {
+    color: #979797;
+}
+
+.address-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(213, 211, 211);
+    padding-bottom: 20px;
+}
+
+.address-container p {
+    margin: 7px 0;
+}
+
+.address-right {
+    text-align: right;
+}
+
+.address>div:first-child>div {
+    display: inline-block;
+}
+
+.policy-container ul {
+    padding-left: 20px;
+}
+
+.policy-container li {
+    font-size: 12px;
+    color: #7b7b7b;
+    margin: 10px 0;
+}
+
+/* rigt container */
+
+.right-container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 30px 30px;
+    height: fit-content;
+    width: 30%;
+}
+
+.fare-top>div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.fare-top {
+    border-bottom: 1px solid rgb(213, 211, 211);
+}
+
+.subtle-blue {
+    color: #3a848c;
+}
+
+.fare-bottom {
+    margin-top: 10px;
+}
+
+.fare-bottom span {
+    font-size: 13px;
+}
+
+.fare-bottom>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fare-bottom ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.fare-bottom p {
+    display: inline;
+}
+
+#coupon {
+    color: #41bca6;
+}
+
+/* footer */
+
+footer {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+}
+
+.checkout-footer {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    gap: 70px;
+    width: 1390px;
+    margin: auto;
+}
+
+.left-footer {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    gap: 10px;
+}
+
+.left-footer p {
+    color: #383838;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.left-footer input {
+    width: 20px;
+    height: 20px;
+    accent-color: #41b6ac;
+}
+
+.right-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 52%;
+    align-items: center;
+}
+
+.fare-text {
+    width: 150px;
+    text-align: center;
+}
+
+.fare-text span:first-child {
+    font-size: 13px;
+    color: #7b7b7b;
+}
+
+.fare-text span:last-child {
+    font-size: 23px;
+}
+
+.right-footer button {
+    width: 230px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#cart_btn {
+    border: 1px solid #41bca6;
+    background-color: white;
+    color: #41bca6;
+}
+
+#cart_btn:disabled {
+    opacity: 60%;
+    border: 1px solid #9a9a9a;
+    color: #9a9a9a;
+    cursor: not-allowed;
+}
+
+#book_btn {
+    border: 1px solid #41bca6;
+    background-color: #41bca6;
+    color: white;
+}
+
+#book_btn:disabled {
+    opacity: 60%;
+    border: 1px solid #9a9a9a;
+    background-color: #9a9a9a;
+    color: black;
+    cursor: not-allowed;
+}
+
+.subtle-green {
+    color: #41bca6;
+    text-decoration: none;
+}
